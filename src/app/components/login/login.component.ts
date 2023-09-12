@@ -37,6 +37,7 @@ export class LoginComponent {
         return alert(res.msg);
       }
       this.localStorageService.setKey("userToken", res.accessToken);
+      this.router.navigateByUrl('/dashboard');
     });
   }
 }
